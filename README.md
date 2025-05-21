@@ -19,7 +19,7 @@ This is the **backend** of a full-stack authentication system, built using **Dja
 ### 1. Clone the Repository
 
 ```bash
-        git clone https://github.com/umarulshahin/Antlegs_Backend.git
+        git clone : https://github.com/umarulshahin/Antlegs_Backend.git
         cd Antlegs
 
 2. Set Up Virtual Environment
