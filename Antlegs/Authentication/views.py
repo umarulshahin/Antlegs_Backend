@@ -7,6 +7,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 # Create your views here.
 
+#....................... User Registration ......................
 @api_view(['POST'])
 def Signup(request):
     
@@ -21,7 +22,9 @@ def Signup(request):
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    
+
+#....................... Custom Token Generation ......................
+
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer 
     

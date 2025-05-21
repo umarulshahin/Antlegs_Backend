@@ -24,6 +24,7 @@ class MongoJWTAuthentication(BaseAuthentication):
             raise AuthenticationFailed('Invalid token.')
 
         id = payload.get('user_id')
+        
         if not id:
             raise AuthenticationFailed('Email not in token.')
         user_data = User_collection.find_one({'_id': ObjectId(id)})

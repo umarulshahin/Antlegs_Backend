@@ -1,6 +1,6 @@
 from rest_framework import serializers
 import re
-from .models import User_collection, UserInstance
+from .models import User_collection
 from django.utils import timezone
 from django.contrib.auth.hashers import make_password,check_password
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -45,6 +45,8 @@ class UserSerializer(serializers.Serializer):
         result = User_collection.insert_one(validated_data)
         validated_data['_id'] = str(result.inserted_id)
         return validated_data
+    
+    
     
 class CustomTokenObtainPairSerializer(serializers.Serializer):
     
