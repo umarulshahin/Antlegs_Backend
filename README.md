@@ -50,8 +50,8 @@ Create a .env file and add your MongoDB URI and secret:
     Method	Endpoint	Description
     POST	/signup/	User registration
     POST	/signin/	User login (JWT)
-    POST /token/refresh/  jwt refresh token
-    GET	/usermanagement/	List users (auth)
+    POST        /token/refresh/  jwt refresh token
+    GET	        /usermanagement/	List users (auth)
     PATCH	/usermanagement/	Update user
     DELETE	/usermanagement/	Delete user
 
