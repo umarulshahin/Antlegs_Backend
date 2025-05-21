@@ -7,6 +7,7 @@ from django.conf import settings
 from Authentication.models import User_collection
 from bson import ObjectId
 
+
 class MongoJWTAuthentication(BaseAuthentication):
     def authenticate(self, request):
         auth_header = request.headers.get('Authorization')

@@ -26,10 +26,9 @@ class UserManagement(APIView):
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
     # ...................... User Updation...................... #
-    def put(self,request): 
+    def patch(self,request): 
         
         data = request.data
-        
         try: 
             
             id = data.get("_id")
@@ -57,8 +56,7 @@ class UserManagement(APIView):
     # ...................... User Deletion ...................... #
     def delete(self,request): 
         
-        id = request.data.get("_id")
-        
+        id = request.data.get('id')
         try: 
             
             if not id: 
